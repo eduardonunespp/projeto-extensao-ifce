@@ -4,6 +4,15 @@
     font-family:  'Press Start 2P';
 }
 
+:root{
+    --font_primaria: 'Press Start 2P';
+    --background-color-buttons: #2B2823;
+    --background-color-menu: #E6D3B6;
+    --backfround-pai: #383734;
+    --color-texto-mario-bros: #534C36;
+    
+}
+
 body {
     margin: 0px;
 }
@@ -11,7 +20,7 @@ body {
 .caixa-pai {
     width: 100vw;
     height: 100vh;
-    background-color: #383734;
+    background-color: var(--backfround-pai);
     position: relative;
 }
 
@@ -34,19 +43,19 @@ body {
 .caixa-menu {
     width: 30%;
     height: 100%;
-    background-color: #E6D3B6;
+    background-color: var(--background-color-menu);
     position: relative;
     float: left;
 }
 
 .caixa-menu h1{
-    color: #534C36;
+    color: var(--color-texto-mario-bros);
     position: absolute;
-    top: 129px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
     line-height: 1.5em;
-    font-size: 2.5em;
+    font-size: 2.1em;
     text-align: center;
     
 }
@@ -55,13 +64,11 @@ body {
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
-
     width: 75%;
-
     padding: 20px;
     border-radius: 10px;
     border: none;
-    background-color: #2B2823;
+    background-color: var(--background-color-buttons);
     color: white; 
     box-shadow: 3px 3px 0px #534C36;
 
@@ -70,11 +77,11 @@ body {
 }
 
 .botao-iniciar {
-    top: 370px;
+    top: 300px;
 }
 
 .caixa-menu .botao-reiniciar{ 
-    top: 450px;
+    top: 365px;
 }
 
 
@@ -91,6 +98,7 @@ body {
     background-image: url(imagens-projeto/background-mario.png);
     background-repeat: repeat-x;
     background-size: contain; 
+    position: relative;
 }
 
 .caixa-game .grama {
@@ -104,3 +112,40 @@ body {
     height: 25%;
     background-image: url(imagens-projeto/terreno-mario.png);
 }
+
+.background #gif-mario{
+    width: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 50px;
+}
+
+.background #obstaculo-mario{
+    width: 60px;
+    position: absolute;
+    bottom: 0px;
+    left: 190px;
+}
+
+.background #nuvens-mario{
+    width: 300px;
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    animation-name: nuvens-movimento;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes nuvens-movimento {
+    to{
+        transform: translateX(0px);
+    }
+    from{
+        transform: translateX(1000px);
+    }
+}
+
+
