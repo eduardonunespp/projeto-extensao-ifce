@@ -10,7 +10,6 @@
     --background-color-menu: #E6D3B6;
     --backfround-pai: #383734;
     --color-texto-mario-bros: #534C36;
-    
 }
 
 body {
@@ -64,7 +63,7 @@ body {
     position: absolute;
     left: 50%; 
     transform: translateX(-50%);
-    width: 75%;
+    width: 70%;
     padding: 20px;
     border-radius: 10px;
     border: none;
